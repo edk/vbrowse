@@ -10,6 +10,7 @@ gem 'ancestry'
 gem 'acts-as-taggable-on', '~>2.1.0'
 gem 'haml'
 gem "nifty-generators", :group => :development
+gem 'inherited_resources'
 
 
 # Gems used only for assets and not required

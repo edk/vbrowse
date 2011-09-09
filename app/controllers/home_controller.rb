@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    #@video = Video
+    @categories = Category.all
   end
 
 end
