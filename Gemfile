@@ -8,6 +8,8 @@ gem 'rails', '3.1.0'
 gem 'sqlite3'
 gem 'ancestry'
 gem 'acts-as-taggable-on', '~>2.1.0'
+gem 'haml'
+gem "nifty-generators", :group => :development
 
 
 # Gems used only for assets and not required
