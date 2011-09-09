@@ -1,0 +1,10 @@
+
+%span
+  = link_to "Manage categories", categories_path
+
+
+%ul
+  - @categories.each do |category|
+    %li
+      = category.name
+      = link_to "Del"
