@@ -1,0 +1,12 @@
+
+
+= render :partial=>'form', :object=> Category.new
+
+%ul
+  - @categories.each do |c|
+    %li
+      = c.name
+      = link_to "Delete", category_url(c), :method=>:delete
+      = link_to "Edit", category_url(c)
+
+
