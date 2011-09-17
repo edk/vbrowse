@@ -8,6 +8,8 @@ https://github.com/ryanb/nifty-generators
 
 http://videojs.com/#getting-started
 
+http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#the-track-element
+
 http://stackoverflow.com/questions/4694519/how-do-i-change-the-src-of-an-html5-video-via-javascript-without-either-crashing
 
 http://www.chipwreck.de/blog/2010/03/01/html-5-video-dom-attributes-and-events/
