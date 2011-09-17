@@ -1,4 +1,20 @@
 
+%video{:width=>"80%", :controls=>''}
+  %source{:id=>'vidsrc', :type=>"video/mp4"}
+
+%div{:style=>'display:inline-block; vertical-align:top; width:18%; overflow-y: auto; height:90%'}
+  %h1 Nav
+  %ul
+    - @movies.each do |movie|
+      %li= movie
+
+%div
+  %span tag/categorize
+  %span rate
+  %span move
+  %span playlist
+  %span delete
+ 
 
 %ul
   - @categories.each do |category|

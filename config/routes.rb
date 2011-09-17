@@ -1,8 +1,7 @@
 Vbrowse::Application.routes.draw do
   resources :categories
   resources :home
-
-  #get "home/index"
+  resource :admin
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
