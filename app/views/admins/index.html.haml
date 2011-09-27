@@ -2,11 +2,13 @@
 
 %h1 Admin
 
-- @settings.each do |setting|
-  = semantic_form_for setting, :url=>admin_path do |f|
-    = f.input :key
-    = f.input :value
-    = f.submit
+%ul
+  - @settings.each do |setting|
+    %li
+      = semantic_form_for setting, :url=>admin_path do |f|
+        = f.input :key
+        = f.input :value
+        = f.submit
 
 = semantic_form_for Setting.new, :url=>admin_path do |f|
   = f.input :key
