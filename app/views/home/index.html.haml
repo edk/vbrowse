@@ -1,12 +1,32 @@
+:javascript
+  $(function() {
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    var scrollNav = new iScroll('navWrapper');
+    function make_selection(el) {
+    console.log(el);
+      el.parents('nav').find('li').removeClass('selected');
+      el.addClass('selected');
+      var v = $('video')[0];
+      v.src = "/videos/more_vids/ripped/AFM Banquet 2010 - YouTube.m4v";
+      //v.src = $(this).html();
+      v.load()
+      v.play();
+    }
+    $('nav li').click(function(){make_selection($(this))});
+  });
 
-%video{:width=>"80%", :controls=>''}
-  %source{:id=>'vidsrc', :type=>"video/mp4"}
-
-%div{:style=>'display:inline-block; vertical-align:top; width:18%; overflow-y: auto; height:90%'}
-  %h1 Nav
-  %ul
-    - @movies.each do |movie|
-      %li= movie
+#page
+  #content
+    %video{:width=>"95%", :controls=>''}
+      %source{:id=>'vidsrc', :type=>"video/mp4"}
+  #sidebar
+    %header Nav
+    %nav#navWrapper
+      %ul#navScroller
+        - @movies.each do |movie|
+          %li= movie
+        - 25.times do |i|
+          %li Dummy line #{i}
 
 %div
   %span tag/categorize
@@ -14,11 +34,9 @@
   %span move
   %span playlist
   %span delete
- 
-
-%ul
-  - @categories.each do |category|
-    %li
-      = link_to category.name, home_url(category)
-      (#{category.movies.size})
+  %div
+    - @categories.each do |category|
+      %span
+        = link_to category.name, home_url(category)
+        (#{category.movies.size})
 

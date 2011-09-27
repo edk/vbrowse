@@ -1,4 +1,6 @@
 Vbrowse::Application.routes.draw do
+  get "organize/index", :as => :organize
+
   resources :categories
   resources :home
   resource :admin
