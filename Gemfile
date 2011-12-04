@@ -12,9 +12,8 @@ gem 'haml'
 gem "nifty-generators", :group => :development
 gem 'inherited_resources'
 gem 'execjs'
-gem 'therubyracer'
 gem 'formtastic'
-
+gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -12,3 +12,16 @@ class Movie < ActiveRecord::Base
     File.join(path, filename)
   end
 end
+# == Schema Information
+#
+# Table name: movies
+#
+#  id          :integer         not null, primary key
+#  filename    :string(255)
+#  path        :string(255)
+#  container   :string(255)
+#  category_id :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+

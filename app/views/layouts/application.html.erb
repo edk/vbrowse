@@ -20,9 +20,8 @@
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
       <%= content_tag :h1, yield(:title) if show_title? %>
-      <%= render "layouts/nav_links" %>
-      <br><br>
       <%= yield %>
+      <%= render "layouts/nav_links" %>
     </div>
   </body>
 </html>
