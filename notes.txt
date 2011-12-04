@@ -1,5 +1,9 @@
 Resources:
 
+https://github.com/purplecabbage/GloveBox
+https://github.com/asyraf9/jquery-mobile/
+
+
 http://asciicasts.com/episodes/262-trees-with-ancestry
 
 https://github.com/mbleigh/acts-as-taggable-on

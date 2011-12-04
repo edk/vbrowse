@@ -2,12 +2,17 @@
   $(function() {
     document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
     var scrollNav = new iScroll('navWrapper');
+
     function make_selection(el) {
-    console.log(el);
       el.parents('nav').find('li').removeClass('selected');
       el.addClass('selected');
       var v = $('video')[0];
-      v.src = "/videos/more_vids/ripped/AFM Banquet 2010 - YouTube.m4v";
+      var basepath = "/videos/more_vids/ripped";
+      var filename = $(el).attr('data-filename');
+      v.src = basepath +'/'+ filename;
+      console.log( basepath +'/'+ filename);
+      $('.title').html(filename);
+      //v.src = "/videos/more_vids/ripped/AFM Banquet 2010 - YouTube.m4v";
       //v.src = $(this).html();
       v.load()
       v.play();
@@ -17,16 +22,16 @@
 
 #page
   #content
-    %video{:width=>"95%", :controls=>''}
+    %video{:width=>"95%", :controls=>true, :autoplay=>true}
       %source{:id=>'vidsrc', :type=>"video/mp4"}
+    %center
+      .title
   #sidebar
     %header Nav
     %nav#navWrapper
       %ul#navScroller
         - @movies.each do |movie|
-          %li= movie
-        - 25.times do |i|
-          %li Dummy line #{i}
+          %li{'data-filename'=>movie.filename}= movie.filename
 
 %div
   %span tag/categorize
