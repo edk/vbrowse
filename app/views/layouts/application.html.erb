@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--
+    To add a home screen icon, create a 114x114 .png file, and then link to it in the header:
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    To add a splash screen during loading, create a 320x460 .png file, and then link to it in the header:
+    <link rel="apple-touch-startup-image" href="./startup.png" /> 
+    The file must be exactly 320x460, or else the iPhone ignores it. (The iPad requires 1004x768.)
+    -->
     
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
     <%= stylesheet_link_tag    "application" %>
