@@ -24,4 +24,12 @@ via apache with the apache_mod_h264_streaming-2.2.7.tar.gz plugin so you can jum
 quickly.  The dvds are ripped using Handbrake with the iPad profile.  I found that High Profile is
 simply too much data to push to the poor ipad.
 
+Installation
+------------
+TBD, once this is working.
+
+
+License
+-------
+see LICENSE file.
 
