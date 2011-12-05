@@ -28,6 +28,11 @@ Installation
 ------------
 TBD, once this is working.
 
+Alternatives
+------------
+XBMC - There are xbmc clients out there.
+vlc  - an ios vlc client is there
+
 
 License
 -------
